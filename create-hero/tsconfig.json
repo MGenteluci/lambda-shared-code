@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "allowUnreachableCode": false,
+        "declarationMap": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "lib": ["es2015", "dom"],
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "hero-repository": ["../hero-repository"]
+        }
+    },
+    "exclude": [
+        "./test",
+        "./node_modules",
+        "./lib",
+        "./coverage"
+    ]
+}

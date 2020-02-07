@@ -1,0 +1,7 @@
+{
+    "yaml.schemaStore.enable": true,
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/awslabs/goformation/master/schema/sam.schema.json": "template.yaml"
+    },
+    "typescript.tsdk": "hero-repository/node_modules/typescript/lib"
+}

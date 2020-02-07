@@ -1,0 +1,19 @@
+{
+  "name": "hero-repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pre:build": "rm -rf ./dist",
+    "build": "npm run pre:build && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "aws-sdk": "^2.585.0",
+    "typescript": "^3.7.3"
+  }
+}

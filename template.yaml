@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Parameters:
+  AliasName:
+    Type: String
+    Default: dev
+Resources:
+  HeroRepositoryLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub "hero-repository-${AliasName}"
+      ContentUri: hero-repository-layer
+      CompatibleRuntimes:
+        - nodejs10.x
+
+  CreateHeroFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "create-hero-${AliasName}"
+      Runtime: nodejs10.x
+      CodeUri: create-hero/
+      Handler: dist/index.handler
+      Layers:
+        - !Ref HeroRepositoryLayer

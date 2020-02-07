@@ -1,0 +1,7 @@
+# Node.js
+node_modules
+
+# Package
+dist
+hero-repository-layer
+template-output.yaml
