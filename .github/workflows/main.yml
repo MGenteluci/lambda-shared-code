@@ -1,20 +1,20 @@
-name: Deploy Stack
-on: 
-  push:
-    branches:
-    - master
+# name: Deploy Stack
+# on: 
+#   push:
+#     branches:
+#     - master
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: mgenteluci/cloudformation-deploy-action@v1.3.0
-      env:
-        AWS_STACK_NAME: 'heroes-service'
-        AWS_REGION: 'us-east-1'
-        AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
-        AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-        AWS_DEPLOY_BUCKET: ${{secrets.AWS_DEPLOY_BUCKET}}
-        AWS_BUCKET_PREFIX: stacks/heroes-service
-        PARAMETER_OVERRIDES: AliasName=dev
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v1
+#     - uses: mgenteluci/cloudformation-deploy-action@v1.3.0
+#       env:
+#         AWS_STACK_NAME: 'heroes-service'
+#         AWS_REGION: 'us-east-1'
+#         AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+#         AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+#         AWS_DEPLOY_BUCKET: ${{secrets.AWS_DEPLOY_BUCKET}}
+#         AWS_BUCKET_PREFIX: stacks/heroes-service
+#         PARAMETER_OVERRIDES: AliasName=dev
